@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Projet JiblyTaw Delivery Admin Dashboard
 
 Ce projet est développé avec Angular 20.0.5 et Bootstrap 5.
@@ -92,3 +93,6 @@ theme/layout/ : mise en page globale (navbar, sidebar) avec un système de navig
 💬 Commentaire
 
 Je m’excuse pour le retard : j’ai ajouté la section détails des commandes, qui n’était pas demandée dans les objectifs initiaux.
+=======
+# jiblytaw-delivery-dashboard
+>>>>>>> 8779434b02b20773da974e9cb61f7d158069ef72
