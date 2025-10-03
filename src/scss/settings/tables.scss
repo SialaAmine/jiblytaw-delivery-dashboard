@@ -1,0 +1,39 @@
+$table-bg: #fff;
+
+$table-hover-bg: #f8f9fb;
+
+$secondary-bg-rgb: #f3f3f3;
+$pagination-active-bg: #1a1a1a;
+$pagination-bg: white;
+$pagination-color: #1a1a1a;
+$pagination-border-color: #1a1a1a;
+$pagination-hover-border-color: #1a1a1a;
+$pagination-active-border-color: #1a1a1a;
+$pagination-active-color: white;
+$pagination-border-radius: 50%;
+$pagination-disabled-border-color: #1a1a1a;
+
+// $form-select-border-width: 0px;
+$form-select-border-color: #cad1db;
+
+.page-item {
+  margin: 10px;
+  border-radius: 50% !important;
+  width: 40px;
+  height: 40px;
+}
+.page-link {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+
+  &:hover {
+    background-color: #1a1a1a !important;
+    color: white !important;
+  }
+}
+// .page-link.active {
+//   color: white !important;
+// }
+
+@import 'bootstrap/scss/bootstrap';

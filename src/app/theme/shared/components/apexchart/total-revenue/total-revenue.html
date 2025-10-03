@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-body">
+    <div class="row mb-3 align-items-center">
+      <div class="col">
+        <div class="fs-6 fw-bolder text-black-50">Total Revenue</div>
+        <h3 class="mt-2 fs-1 fw-bold total-revenu-title">€ 12 480,775</h3>
+      </div>
+      <div class="col-auto">
+        <select class="form-select p-r-35" title="Select">
+          <option>Weekly</option>
+          <option>Monthly</option>
+          <option>Yearly</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <select class="form-select p-r-35" title="Select">
+          <option>All Restaurants</option>
+          <option>Restaurant A</option>
+          <option>Restaurant B</option>
+        </select>
+      </div>
+    </div>
+
+    <apx-chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [dataLabels]="chartOptions.dataLabels"
+      [stroke]="chartOptions.stroke"
+      [xaxis]="chartOptions.xaxis"
+      [yaxis]="chartOptions.yaxis"
+      [fill]="chartOptions.fill"
+      [tooltip]="chartOptions.tooltip"
+      [colors]="chartOptions.colors"
+    ></apx-chart>
+  </div>
+</div>

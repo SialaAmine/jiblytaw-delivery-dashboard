@@ -1,0 +1,22 @@
+<div class="card shadow-sm p-3 rounded-4">
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <h6 class="text-muted small mb-0">Average Order Value</h6>
+    <button class="btn btn-sm dropdown-toggle fw-semibold text-dark" type="button">All Restaurants</button>
+  </div>
+
+  <h4 class="fw-bold mb-2">€ {{ averageValue.toFixed(1) }}</h4>
+
+  <apx-chart
+    *ngIf="chartOptions"
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [stroke]="chartOptions.stroke"
+    [fill]="chartOptions.fill"
+    [dataLabels]="chartOptions.dataLabels"
+    [xaxis]="chartOptions.xaxis"
+    [yaxis]="chartOptions.yaxis"
+    [tooltip]="chartOptions.tooltip"
+    [markers]="chartOptions.markers"
+    [grid]="chartOptions.grid"
+  ></apx-chart>
+</div>

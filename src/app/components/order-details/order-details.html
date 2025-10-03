@@ -1,0 +1,144 @@
+<div class="row details-card p-3 p-md-4 g-3">
+  <!-- Left Column (Order Info) -->
+  <div class="col-12 col-lg-7 fs-4">
+    <!-- top meta info -->
+    <div class="row g-3 align-items-center small text-muted mb-3">
+      <div class="col-6 col-md-3">
+        <div class="meta-infos-card px-3 h-100">
+          <div class="fw-semibold">Vendor</div>
+          <div class="text-body fs-5">{{ order.vendor }}</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="meta-infos-card px-3 h-100">
+          <div class="fw-semibold">Number of article</div>
+          <div class="text-body fs-5">{{ order.items.length }}</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="meta-infos-card px-3 h-100">
+          <div class="fw-semibold">Preparation Time</div>
+          <div class="text-body fs-5">20-30 min</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="meta-infos-card px-3 h-100">
+          <div class="fw-semibold d-flex align-items-center justify-content-between">
+            <span>Status</span>
+          </div>
+          <select
+            class="form-select form-select-sm custom-select fw-bolder fs-5"
+            [ngClass]="statusClass(order.status)"
+            [ngModel]="order.status"
+            (ngModelChange)="onStatusChange($event)"
+          >
+            <option *ngFor="let s of statuses" [value]="s">{{ s }}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- items list -->
+    <div class="list-group fs-5 mb-3">
+      <div *ngFor="let it of order.items" class="meta-infos-card px-3">
+        <div class="d-flex align-items-center w-100">
+          <div class="me-2">
+            <img class="rounded-2" src="../../../assets/images/image.jpg" alt="" width="50" height="50" />
+          </div>
+          <div class="d-flex align-items-start w-100 justify-content-between">
+            <div>
+              <div class="fw-semibold">{{ it.name }}</div>
+              <div class="text-muted small">{{ it.note }}</div>
+            </div>
+            <div class="fw-semibold">€ {{ it.price | number:'1.2-2' }}</div>
+          </div>
+        </div>
+        <div class="note small text-muted mt-1">
+          NOTE: Please bake it a little longer for extra crispiness. Cut into square slices instead of triangles.
+        </div>
+      </div>
+    </div>
+
+    <!-- totals -->
+    <div class="mb-4 meta-infos-card fs-5">
+      <div class="d-flex justify-content-between">
+        <span class="text-muted">Subtotal</span>
+        <span>€ {{ (order.totalPrice - 2.96) | number:'1.2-2' }}</span>
+      </div>
+      <div class="d-flex justify-content-between">
+        <span class="text-muted">Delivery Cost</span>
+        <span>€ 2.96</span>
+      </div>
+      <hr class="my-2" style="border: 1px dashed" />
+      <div class="d-flex justify-content-between fw-bold">
+        <span class="text-muted">Total</span>
+        <span>€ {{ order.totalPrice | number:'1.2-2' }}</span>
+      </div>
+    </div>
+
+    <!-- delivery + map -->
+    <div class="fs-4">
+      <h6 class="card-title fs-3 mb-2">Delivery Information</h6>
+      <div class="row g-2 small">
+        <div class="col-6 col-md-3">
+          <div class="meta-infos-card px-2">
+            <div class="text-muted">Driver Full Name</div>
+            <div class="fw-semibold">{{ order.deliveryInfo.driverFullName }}</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="meta-infos-card px-2">
+            <div class="text-muted">Driver Phone</div>
+            <div class="fw-semibold">{{ order.deliveryInfo.driverPhone }}</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="meta-infos-card px-2">
+            <div class="text-muted">Vehicle</div>
+            <div class="fw-semibold">{{ order.deliveryInfo.vehicle }}</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="meta-infos-card px-2">
+            <div class="text-muted">Compensation</div>
+            <div class="fw-semibold">€ {{ order.deliveryInfo.compensation | number:'1.2-2' }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="row g-2 small">
+        <div class="col-12 col-md-6">
+          <div class="meta-infos-card px-2">
+            <div class="text-muted">Delivery Address</div>
+            <div class="fw-semibold">{{ order.deliveryInfo.deliveryAddress }}</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="meta-infos-card px-2">
+            <div class="text-muted">Customer Phone</div>
+            <div class="fw-semibold">{{ order.deliveryInfo.customerPhone }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="row g-2 small">
+        <div class="col-12">
+          <div class="meta-infos-card px-2">
+            <div class="text-muted">Order Note</div>
+            <div class="fw-semibold">{{ order.deliveryInfo.orderNote }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Column (Map) -->
+  <div class="col-12 col-lg-5">
+    <div class="w-100 h-100">
+      <div class="p-1">
+        <h3 class="d-flex align-items-center justify-content-between mb-3">Order Live Tracking</h3>
+        <div class="map-placeholder rounded-3">
+          <img class="map-image img-fluid rounded-3" src="../../../assets/images/map-placeholder.jpg" alt="Map" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

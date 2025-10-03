@@ -1,0 +1,14 @@
+<nav class="">
+  <div class="navbar-wrapper">
+    <div class="m-header">
+      <a [routerLink]="['/default/']" class="b-brand d-flex justify-content-center">
+        @if (themeMode === 'compact') {
+          <img src="assets/images/Logo-small.svg" alt="small-menu-logo" class="logo logo-sm w-35" />
+        } @else {
+          <img src="assets/images/logo.svg" alt="logo" class="logo logo-lg w-35" />
+        }
+      </a>
+    </div>
+    <app-nav-content (NavCollapsedMob)="navCollapseMob()" (SubmenuCollapse)="navSubmenuCollapse()" class="scroll-div w-100 compact" />
+  </div>
+</nav>

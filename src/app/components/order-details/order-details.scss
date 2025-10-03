@@ -1,0 +1,76 @@
+.details-card {
+  background: #ebebeb;
+  border-radius: 1rem;
+  border: 1px solid #eee;
+}
+.list-group-item {
+  border: 1px solid #f0f0f0;
+}
+.meta-infos-card {
+  align-items: center;
+  padding: 13px 25px;
+  box-shadow: none;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+.map-placeholder {
+  //   aspect-ratio: 16/9;
+
+  //   //   background-image: url('../../../assets/map-placeholder.jpg');
+  //   background-position: center;
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  border: 1px solid #eee;
+}
+.map-image {
+  object-fit: cover;
+  width: -webkit-fill-available;
+}
+.badge {
+  font-weight: 600;
+}
+.badge.Placed {
+  background-color: #eef5ff;
+  color: #7c8ba0;
+}
+.badge.Preparing {
+  background-color: #fff6e6;
+  color: #d9822b;
+}
+.badge.InDelivery {
+  background-color: #e8f3ff;
+  color: #1a73e8;
+}
+.badge.Delivered {
+  background-color: #e9f7ef;
+  color: #1e8e3e;
+}
+.badge.Canceled {
+  background-color: #ffecec;
+  color: #d93025;
+}
+.custom-select {
+  padding: 0 !important;
+  border: 0px !important;
+}
+.custom-select:focus,
+.custom-select:hover {
+  box-shadow: none !important;
+}
+
+.Placed {
+  color: #7c8ba0;
+}
+.Preparing {
+  color: #d9822b;
+}
+.InDelivery {
+  color: #1a73e8;
+}
+.Delivered {
+  color: #1e8e3e;
+}
+.Canceled {
+  color: #d93025;
+}
