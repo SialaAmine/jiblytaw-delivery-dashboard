@@ -12,11 +12,11 @@ Ouvrir un terminal (bash).
 
 Cloner le dépôt avec la commande :
 
-git clone http://url.git.......com
+git clone https://github.com/SialaAmine/jiblytaw-delivery-dashboard.git
 
 Accéder au dossier du projet :
 
-cd ....
+cd jiblytaw-delivery-dashboard
 
 Installer les dépendances :
 
@@ -92,7 +92,8 @@ theme/layout/ : mise en page globale (navbar, sidebar) avec un système de navig
 
 💬 Commentaire
 
-Je m’excuse pour le retard : j’ai ajouté la section détails des commandes, qui n’était pas demandée dans les objectifs initiaux.
-=======
+# Je m’excuse pour le retard : j’ai ajouté la section détails des commandes, qui n’était pas demandée dans les objectifs initiaux.
+
 # jiblytaw-delivery-dashboard
->>>>>>> 8779434b02b20773da974e9cb61f7d158069ef72
+
+> > > > > > > 8779434b02b20773da974e9cb61f7d158069ef72
